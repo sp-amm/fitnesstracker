@@ -15,9 +15,21 @@ router.put("/api/workouts", ({ body }, res) => {
 });
 
 //Route to add new workouts
-router.post("/api/workouts/range", ({ body }, res) => {
-  console.log({ body });  
-  Workouts.insertMany(body)
+/* router.post("/api/workouts/range", (req, res) => {
+  console.log(req.body);  
+  Workouts.insertMany(req.body)
+    .then(dbexercise => {
+      res.json(dbexercise);
+    })
+    .catch(err => {
+      res.status(400).json(err);
+    });
+}); */
+
+//Route to show all workouts in stats
+router.get("/api/workouts/range", (req, res) => {
+  console.log(req.body);  
+  Workouts.find()
     .then(dbexercise => {
       res.json(dbexercise);
     })
@@ -26,10 +38,9 @@ router.post("/api/workouts/range", ({ body }, res) => {
     });
 });
 
-//Route to show last workout
 
 
-//Route to show all workouts
+//Route to show most recent workout
 router.get("/api/workouts", (req, res) => {
     Workouts.find({})
     .sort({ date: -1 })
