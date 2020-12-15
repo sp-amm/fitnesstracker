@@ -2,9 +2,10 @@ const router = require("express").Router();
 //Import workouts model to use database
 const Workouts = require("../models/workouts.js");
 
-//Route to add new workouts
-router.post("exercise/api/workouts", ({ body }, res) => {
-    Workouts.create(body)
+//Route to add new exercises
+router.put("/api/workouts", ({ body }, res) => {
+  console.log({ body });    
+  Workouts.create(body)
     .then(dbexercise => {
       res.json(dbexercise);
     })
@@ -15,7 +16,8 @@ router.post("exercise/api/workouts", ({ body }, res) => {
 
 //Route to add new workouts
 router.post("/api/workouts/range", ({ body }, res) => {
-    Workouts.insertMany(body)
+  console.log({ body });  
+  Workouts.insertMany(body)
     .then(dbexercise => {
       res.json(dbexercise);
     })
@@ -24,10 +26,10 @@ router.post("/api/workouts/range", ({ body }, res) => {
     });
 });
 
-//Route to show all workouts
-
-
 //Route to show last workout
+
+
+//Route to show all workouts
 router.get("/api/workouts", (req, res) => {
     Workouts.find({})
     .sort({ date: -1 })
