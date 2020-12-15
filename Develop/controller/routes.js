@@ -3,9 +3,9 @@ const router = require("express").Router();
 const Workouts = require("../models/workouts.js");
 
 //Route to add new exercises
-router.put("/api/workouts", ({ body }, res) => {
-  console.log({ body });    
-  Workouts.create(body)
+router.put("/api/workouts/:id", (req, res) => {
+  console.log(req.body);    
+  Workouts.create(req.body)
     .then(dbexercise => {
       res.json(dbexercise);
     })
@@ -15,7 +15,7 @@ router.put("/api/workouts", ({ body }, res) => {
 });
 
 //Route to add new workouts
-/* router.post("/api/workouts/range", (req, res) => {
+router.post("/api/workouts", (req, res) => {
   console.log(req.body);  
   Workouts.insertMany(req.body)
     .then(dbexercise => {
@@ -24,7 +24,7 @@ router.put("/api/workouts", ({ body }, res) => {
     .catch(err => {
       res.status(400).json(err);
     });
-}); */
+});
 
 //Route to show all workouts in stats
 router.get("/api/workouts/range", (req, res) => {
@@ -37,7 +37,6 @@ router.get("/api/workouts/range", (req, res) => {
       res.status(400).json(err);
     });
 });
-
 
 
 //Route to show most recent workout
