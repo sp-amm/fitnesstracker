@@ -20,7 +20,7 @@ An application using NoSQL database MongoDB and Mongoose to track workouts by lo
 
 
 ## Usage
-Application deployed on heroku at 
+Application deployed on heroku at https://morning-meadow-62436.herokuapp.com
 
 ## License
 MIT License

@@ -2,17 +2,6 @@ const router = require("express").Router();
 //Import workouts model to use database
 const Workouts = require("../models/workouts.js");
 
-/* //Route to add new exercises
-router.put("/api/workouts/:id", (req, res) => {
-  console.log(req.body);    
-  Workouts.create(req.body)
-    .then(dbexercise => {
-      res.json(dbexercise);
-    })
-    .catch(err => {
-      res.status(400).json(err);
-    });
-}); */
 
 // Route to add a new exercise to a workout by ID
 router.put('/api/workouts/:id', ({ body, params }, res) => {
