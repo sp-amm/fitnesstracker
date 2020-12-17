@@ -8,7 +8,7 @@ README.md
 An application using NoSQL database MongoDB and Mongoose to track workouts by logging exercises. 
 
 ## Website image - (locally deployed)
-<img src=Develop/images/img1.JPG><img src=Develop/images/img2.JPG><img src=Develop/images/img3.JPG>
+<img src=images/img1.JPG><img src=images/img2.JPG><img src=images/img3.JPG>
 
 ## Table of Contents:
 
