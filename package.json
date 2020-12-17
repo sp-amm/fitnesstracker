@@ -2,7 +2,7 @@
   "name": "fitnesstracker",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "Develop/server.js",
   "scripts": {
     "start": "node server.js"
   },
