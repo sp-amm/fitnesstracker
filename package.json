@@ -1,23 +1,22 @@
 {
-  "name": "fitnesstracker",
+  "name": "mongoose_skeleton",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sp-amm/fitnesstracker.git"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js",
+    "seed": "node seeders/seed.js"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/sp-amm/fitnesstracker/issues"
-  },
-  "homepage": "https://github.com/sp-amm/fitnesstracker#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "mongoose": "^5.11.7"
+    "express": "^4.16.3",
+    "fetch": "^1.1.0",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.3.16",
+    "morgan": "^1.9.1",
+    "node-fetch": "^2.6.1"
   }
 }
